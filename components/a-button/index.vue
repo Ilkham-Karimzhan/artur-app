@@ -1,8 +1,7 @@
 <script setup lang="ts">
 defineOptions({name: 'AButton'})
 defineProps<{
-  label: string
-
+  label?: string
 }>()
 </script>
 <template>

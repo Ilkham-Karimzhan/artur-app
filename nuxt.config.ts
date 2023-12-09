@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
     devtools: {enabled: true},
-    modules: ['@vue-macros/nuxt', 'vue3-carousel-nuxt', '@nuxtjs/color-mode', 'nuxt-svgo', '@nuxt/image', '@nuxtjs/tailwindcss'],
+    modules: ['@vue-macros/nuxt', '@nuxtjs/google-fonts', 'vue3-carousel-nuxt', '@nuxtjs/color-mode', 'nuxt-svgo', '@nuxt/image', '@nuxtjs/tailwindcss'],
     components: [
         {
             path: '~/components',

@@ -49,7 +49,7 @@ const input = ref<string>('')
   </nav>
 </template>
 <style scoped lang="scss">
-.icon:hover > {
+.icon:hover > *{
   filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(198deg) brightness(105%) contrast(102%);
 }
 </style>

@@ -12,6 +12,7 @@
   "devDependencies": {
     "@nuxt/devtools": "latest",
     "@nuxtjs/color-mode": "^3.3.2",
+    "@nuxtjs/google-fonts": "^3.1.1",
     "@nuxtjs/tailwindcss": "^6.10.1",
     "@vue-macros/nuxt": "^1.9.7",
     "nuxt": "^3.8.2",
