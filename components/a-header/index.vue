@@ -27,7 +27,7 @@ const input = ref<string>('')
     </div>
     <ul class="flex gap-10">
       <li class="text-[#807D7E] cursor-pointer transition hover:text-[#3C4242] text-[22px] font-bold" v-for="(link, idx) in links" :key="idx">
-        {{link}}
+        <nuxt-link :to="`catalog/${link.toLowerCase()}`">{{ link }}</nuxt-link>
       </li>
     </ul>
     <div>

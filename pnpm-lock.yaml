@@ -8,6 +8,9 @@ dependencies:
   '@nuxt/image':
     specifier: ^1.1.0
     version: 1.1.0
+  vue-slider-component:
+    specifier: 4.1.0-beta.7
+    version: 4.1.0-beta.7
   vue3-carousel-nuxt:
     specifier: ^1.1.0
     version: 1.1.0(vue@3.3.10)
@@ -2902,6 +2905,7 @@ packages:
 
   /color-name@1.1.4:
     resolution: {integrity: sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==}
+    requiresBuild: true
 
   /color-string@1.9.1:
     resolution: {integrity: sha512-shrVawQFojnZv6xM40anx4CkoDP+fZsw/ZerEMsW/pyzsRbElpsL/DBVW7q3ExxwusdNXI3lXpuhEZkzs8p5Eg==}
@@ -7352,6 +7356,10 @@ packages:
       '@vue/devtools-api': 6.5.1
       vue: 3.3.10
     dev: true
+
+  /vue-slider-component@4.1.0-beta.7:
+    resolution: {integrity: sha512-Qb7K920ZG7PoQswoF6Ias+i3W2rd3k4fpk04JUl82kEUcN86Yg6et7bVSKWt/7VpQe8a5IT3BqCKSCOZ7AJgCA==}
+    dev: false
 
   /vue-template-compiler@2.7.15:
     resolution: {integrity: sha512-yQxjxMptBL7UAog00O8sANud99C6wJF+7kgbcwqkvA38vCGF7HWE66w0ZFnS/kX5gSoJr/PQ4/oS3Ne2pW37Og==}
