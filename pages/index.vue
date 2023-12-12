@@ -5,6 +5,10 @@ import ArrowLeftMain from '@/assets/icons/arrow-left-main.svg'
 import ArrowDown from '@/assets/icons/arrow-down.svg'
 import {Carousel, Slide, Pagination, Navigation} from 'vue3-carousel'
 
+useHead({
+  title: 'Главная - Beyoung',
+})
+
 interface Arrival {
   image: string
   title: string
@@ -67,6 +71,7 @@ const arrival: Arrival[] = [
     title: 'Urban Shirts'
   },
 ]
+
 
 </script>
 <template>

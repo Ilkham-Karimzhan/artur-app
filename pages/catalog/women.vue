@@ -2,6 +2,10 @@
 import {createClient} from "@supabase/supabase-js";
 import type {Good} from "~/types/good";
 
+useHead({
+  title: 'Женская одежда'
+})
+
 const client = createClient('https://bqkjptecxnnpwafkbuxe.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJxa2pwdGVjeG5ucHdhZmtidXhlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDE4NzYyMzAsImV4cCI6MjAxNzQ1MjIzMH0._ZccfzjEK7HnLEJLUVCVzl3IelCA7VJ8YrAF5UoK97Y')
 
 const isLoading = ref<boolean>(false)
