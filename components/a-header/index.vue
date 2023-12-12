@@ -23,7 +23,7 @@ const input = ref<string>('')
 <template>
   <nav class="flex items-center justify-between max-w-[1240px] mx-auto py-[31px]">
     <div class="w-[90px] h-[45px]">
-      <NuxtImg width="90px" src="/image/logo.png" alt="Logo" />
+      <nuxt-link to="/"><NuxtImg width="90px" src="/image/logo.png" alt="Logo" /></nuxt-link>
     </div>
     <ul class="flex gap-10">
       <li class="text-[#807D7E] cursor-pointer transition hover:text-[#3C4242] text-[22px] font-bold" v-for="(link, idx) in links" :key="idx">

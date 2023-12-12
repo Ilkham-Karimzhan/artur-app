@@ -2,8 +2,8 @@
   import FilterIcon from '~/assets/icons/filter.svg';
   import ArrowRight from '~/assets/icons/arrow-right.svg';
   import { colors } from '~/assets/static-data/useColors';
-  import { clothTypes } from '../../assets/static-data/useClothTypes';
-  import { clothSizes } from '../../assets/static-data/useClothSizes';
+  import { clothTypes } from '~/assets/static-data/useClothTypes';
+  import { clothSizes } from '~/assets/static-data/useClothSizes';
 
   const isPriceOpen = ref<boolean>(false);
   const isColorOpen = ref<boolean>(false);
@@ -11,9 +11,11 @@
 
   const priceFrom = ref<number>(0);
   const priceTo = ref<number>(0);
+  const selectedColor = ref<string>('');
+  const selectedSize = ref<string>('');
 </script>
 <template>
-  <div class="w-[295px] text-[#807D7E]">
+  <div class="min-w-[295px] text-[#807D7E]">
     <div class="filter">
       <div
         class="flex justify-between items-center px-[30px] py-5 border-r border-l border-b border-[#BEBCBD]"
@@ -91,12 +93,14 @@
       >
         <ul class="flex justify-between flex-wrap gap-[18px]">
           <li
-            class="flex flex-col justify-center items-center gap-[18px] text-sm font-bold"
+            class="flex flex-col justify-center items-center w-[40px] gap-[18px] text-sm font-bold"
             v-for="(color, idx) in colors"
             :key="idx"
+            @click="selectedColor = color.hex"
           >
             <div
               class="w-[36px] h-[36px] rounded-xl transition hover:scale-110 cursor-pointer"
+              :class="{ 'border-2 border-[#F05A00]': selectedColor === color.hex}"
               :style="{ 'background-color': color.hex }"
             ></div>
             <p>{{ color.label }}</p>
@@ -126,8 +130,10 @@
         <ul class="flex flex-wrap gap-5 text-sm font-bold">
           <li
             class="flex items-center justify-center cursor-pointer transition hover:scale-110 w-[61px] h-[32px] px-[17px] py-[7px] rounded-lg border border-[#BEBCBD]"
+            :class="{'border-[#F05A00]': selectedSize === size}"
             v-for="(size, idx) in clothSizes"
             :key="idx"
+            @click="selectedSize = size"
           >
             <span>{{ size }}</span>
           </li>
