@@ -1,11 +1,7 @@
-export const clothSizes = [
-  'XXS',
+export const clothSizes: string[] = [
   'XL',
   'XS',
   'S',
   'M',
   'L',
-  'XXL',
-  '3XL',
-  '4XL',
 ];

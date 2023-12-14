@@ -34,7 +34,9 @@
       return data;
     });
     item.value = (data.value as Good[])[0];
-    console.log(data.value, item.value);
+    currentSize.value = item.value.size.size[0];
+    currentColor.value = item.value.color.color[0];
+
     isLoading.value = false;
   };
   getGoods();
@@ -180,33 +182,51 @@
       <p class="my-[30px] text-[#BEBCBD]">{{ item.description.base }}</p>
       <div class="flex bg-[#F6F6F6] w-fit rounded-2xl">
         <div>
-          <div class="py-[24px] px-[48px] border-b border-r border-[#BEBCBD]">
+          <div v-if="item.description.Fabric" class="py-[24px] px-[48px] border-b border-r border-[#BEBCBD]">
             <p class="mb-3 text-[#807D7E] text-base">Fabric</p>
             <p>{{ item.description.Fabric }}</p>
           </div>
-          <div class="py-[24px] px-[48px] border-r border-[#BEBCBD]">
+          <div v-if="item.description.neck" class="py-[24px] px-[48px] border-r border-[#BEBCBD]">
             <p class="mb-3 text-[#807D7E] text-base">Neck</p>
             <p>{{ item.description.neck }}</p>
           </div>
+          <div v-if="item.description.side_length" class="py-[24px] px-[48px] border-r border-[#BEBCBD]">
+            <p class="mb-3 text-[#807D7E] text-base">Длина по боковому шву</p>
+            <p>{{ item.description.side_length }}</p>
+          </div>
         </div>
         <div>
-          <div class="py-[24px] px-[48px] border-b border-r border-[#BEBCBD]">
+          <div v-if="item.description.pattern" class="py-[24px] px-[48px] border-b border-r border-[#BEBCBD]">
             <p class="mb-3 text-[#807D7E] text-base">Pattern</p>
             <p>{{ item.description.pattern }}</p>
           </div>
-          <div class="py-[24px] px-[48px] border-r border-[#BEBCBD]">
+          <div v-if="item.description.sleeve" class="py-[24px] px-[48px] border-r border-[#BEBCBD]">
             <p class="mb-3 text-[#807D7E] text-base">Sleeve</p>
             <p>{{ item.description.sleeve }}</p>
           </div>
+          <div v-if="item.description.width_bottom" class="py-[24px] px-[48px] border-r border-[#BEBCBD]">
+            <p class="mb-3 text-[#807D7E] text-base">Ширина по низу</p>
+            <p>{{ item.description.width_bottom }}</p>
+          </div>
         </div>
         <div>
-          <div class="py-[24px] px-[48px] border-b border-[#BEBCBD]">
+          <div v-if="item.description.fit" class="py-[24px] px-[48px] border-b border-[#BEBCBD]">
             <p class="mb-3 text-[#807D7E] text-base">Fit</p>
             <p>{{ item.description.fit }}</p>
           </div>
-          <div class="py-[24px] px-[48px] border-[#BEBCBD]">
+          <div v-if="item.description.style" class="py-[24px] px-[48px] border-[#BEBCBD]">
             <p class="mb-3 text-[#807D7E] text-base">Style</p>
             <p>{{ item.description.style }}</p>
+          </div>
+        </div>
+        <div>
+          <div v-if="item.description.zipper" class="py-[24px] px-[48px] border-b border-l border-[#BEBCBD]">
+            <p class="mb-3 text-[#807D7E] text-base">Застежка </p>
+            <p>{{ item.description.zipper }}</p>
+          </div>
+          <div v-if="item.description.pocket" class="py-[24px] px-[48px] border-l border-[#BEBCBD]">
+            <p class="mb-3 text-[#807D7E] text-base">Карманы</p>
+            <p>{{ item.description.pocket }}</p>
           </div>
         </div>
       </div>
